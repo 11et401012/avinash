@@ -1,0 +1,59 @@
+
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+	<ul class="nav navbar-nav">
+		<li class="nav-item active">
+			
+			<a  href="#/">Home</a>
+			</li>
+		<li>
+		<a  href="#about">About</a>
+		</li>
+		<li>
+     	<a  href="#contact">Contact</a>
+		</li>
+		<li >
+		<a  href="#form">Form</a>
+		</li>
+			<li >
+		  <a  href="#details">Dashboard</a>
+		</li>
+
+	</ul>
+</div>
+</nav>
+
+<div  class="container-fluid" ng-controller="details">
+
+<table  class="table">
+	<tr>
+		<th>
+			First Name
+		</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>phone</th>
+		<th>gender</th>
+		<th>Skill</th>
+		<th>Hobies</th>
+		<th>Action</th>
+		
+	</tr>
+	<tr   ng-repeat="reg in registration">
+		<td>{{reg.fname}}</td>
+		<td>{{reg.lname}}</td>
+		<td>{{reg.email}}</td>
+		<td>{{reg.phone}}</td>
+		<td>{{reg.gender}}</td>
+		<td>{{reg.skill}}</td>
+		<td>{{reg.hobies}}</td>
+      <td>
+      	<input type="button" value="delete"  ng-click="delete(reg._id)">
+      	&nbsp;
+      	<a href="#form/{{reg._id}}" ng-click="Edit(reg._id)">Edit</a>
+      </td>
+
+	</tr>
+</table>
+</div>

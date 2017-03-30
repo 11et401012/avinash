@@ -1,0 +1,76 @@
+
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+	<ul class="nav navbar-nav">
+		<li class="nav-item active">
+			
+			<a  href="#/">Home</a>
+			</li>
+		<li>
+		<a  href="#about">About</a>
+		</li>
+		<li>
+     	<a  href="#contact">Contact</a>
+		</li>
+		<li >
+		<a  href="#form">Form</a>
+		</li>
+			<li >
+		  <a  href="#details">Dashboard</a>
+		</li>
+
+	</ul>
+</div>
+</nav>
+
+<div  style="width:80%;border:1px solid;margin-left:100px; padding:20px;">
+	
+	<form name="form"   ng-controller="myctrl">
+	<div class="form-group" >
+	
+	<label>First Name:</label>
+  <input type="text" name="fname"  class="form-control" ng-model="form1.fname"  id="txtfname"><span id="spnfname"></span>
+</div>  
+<div class="form-group"> 
+   <label>Last name:</label>
+		<input type="text" name="lname" ng-model="form1.lname"  class="form-control" id="txtlname"><span id="spnlname"></span>
+		</div>
+		
+		<div class="form-group">
+		<label>Email:</label>
+		<input type="text" name="email" class="form-control" ng-model="form1.email"   id="txtemail"><span id="spnemail"></span>
+       </div>
+	   
+		<div class="form-group">
+		<label>Phone:</label><input type="text" class="form-control" name="phone" ng-model="form1.phone" id="txtphone"><span id="spnphone"></span>
+      </div>
+	  
+        <div class="form-group">
+		<label>Gender</label>
+		<input type="radio" class="form-check-input" name="gender" ng-model="form1.gender" value="male">male
+		<input type="radio"  class="form-check-input" name="gender" ng-model="form1.gender" value="female">female<span id="spngen"></span>
+		</div>
+		<div class="form-group">
+		<label>Skill:</label>
+       <input type="checkbox" name="chk" class="form-check-input" value="c">c
+		<input type="checkbox" name="chk"  class="form-check-input" value="c++">c++
+
+		<input type="checkbox" name="chk" class="form-check-input" value="java">java  &nbsp;<span  id="spnchk"></span>
+		</div>
+		<div class="from-group">
+		<label>Hobies</label>
+		<select  id="drpselect" class="form-control" ng-model="form1.hobies"  ng-change="change()">
+		<option>select</option>
+		<option value="cricket">Playing Cricket</option>
+		<option value="football">Playing football</option>
+		<option value="travelling">Travelling</option>
+		</select>
+		<span id="btn"></span>
+		</div>
+		<br>
+		<div class="form-group">
+		<input type="button"  class="btn btn-primary" value="submit"  ng-click="data(form1)">
+		</div>
+	</form>
+</div>
